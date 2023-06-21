@@ -14,7 +14,7 @@ do{
     if(alumno=="basta"){
         break;
     }
-    switch(parseint(alumno)){
+    switch(parseInt(alumno)){
         case 1:
             nota1=parseFloat(prompt("Por favor ingrese la nota:"));
             cantidad1++;
@@ -32,13 +32,12 @@ do{
             case 3:
             nota3=parseFloat(prompt("Por favor ingrese la nota:"));
             cantidad3++;
-            total3=total1+nota1;
+            total3=total3+nota3;
             alert("Promedio alumno 3:" + promedio(total3,cantidad3));
             break;
 
             default:
-                if(alumno!=="basta"){
                     alumno=(prompt("No ha ingresado un alumno existente. Ingrese otro numero o escriba basta para terminar:"));
-                }
+                
     }
 }while(alumno!=="basta");
