@@ -1,0 +1,1 @@
+let boletin= [new Materia("Matematica"),new Materia("Fisica"),new Materia("Quimica"),new Materia("Python")];
