@@ -19,7 +19,7 @@ btnRegistrar.addEventListener("click", function (event) {
     const nombre = inputNombre.value;
     const apellido = inputApellido.value;
     const mensaje = persona.crearAlumno(registro, nombre, apellido);
-    mostrarMensaje(mensaje);
+    persona.mostrarMensaje(mensaje);
     formRegistrar.reset();
 });
 
@@ -28,7 +28,7 @@ btnAgregar.addEventListener("click", function (event) {
     const registro = inputRegistroNota.value;
     const nota = parseFloat(inputNota.value);
     const mensaje = persona.agregarNota(registro, nota);
-    mostrarMensaje(mensaje);
+    persona.mostrarMensaje(mensaje);
     formAgregarNota.reset();
 });
 
@@ -36,6 +36,6 @@ btnConsultar.addEventListener("click", function (event) {
     event.preventDefault();
     const registro = inputRegistroPromedio.value;
     const mensaje = persona.verPromedio(registro);
-    mostrarMensaje(mensaje);
+    persona.mostrarMensaje(mensaje);
     formPromedio.reset();
 });
