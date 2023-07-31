@@ -20,12 +20,13 @@ class Alumno{
 
     crearAlumno(registro,nombre,apellido){
         if(alumnos.some(alumno => alumno.registro === registro)){
-            return("Alumno existente")
+            this.mostrarMensajeMal("Alumno existente");
         }else{
             const nuevoAlumno= new Alumno(registro,nombre,apellido);
             alumnos.push(nuevoAlumno);
             localStorage.setItem("alumnos", JSON.stringify(alumnos));
-            return("Alumno creado con exito")
+            this.mostrarMensajeOk("Alumno creado con éxito");
+            // return("Alumno creado con exito")
         }
     }
 
@@ -34,22 +35,40 @@ class Alumno{
         if (alumno) {
             alumno.cantidad++;
             alumno.total += nota;
-            return("Nota agregada con exito")
+            this.mostrarMensajeOk("Nota agregada con éxito");
+            // return("Nota agregada con exito")
         }else{
-            return("Número de alumno inválido.");
+            this.mostrarMensajeMal("Número de alumno inválido.");
+            // return("Número de alumno inválido.");
         }
     }
 
     verPromedio(registro){
         const alumno = alumnos.find(alumno => alumno.registro === registro);
         if (alumno) {
-            return alumno.promedio();
+            this.mostrarMensajeOk(alumno.promedio());
+            // return alumno.promedio();
         }else{
-            return("Número de alumno inválido.");
+            this.mostrarMensajeMal("Número de alumno inválido");
+            // return("Número de alumno inválido.");
         }
     }
 
-    mostrarMensaje(mensaje){
-        output.innerHTML = mensaje;
+    mostrarMensajeOk(mensaje){
+        // output.innerHTML = mensaje;
+        Swal.fire({
+            icon: "success",
+            title: mensaje,
+            // text: mensaje,
+        });
+    }
+
+    mostrarMensajeMal(mensaje){
+        // output.innerHTML = mensaje;
+        Swal.fire({
+            icon: "warning",
+            title: mensaje,
+            // text: mensaje,
+        });
     }
 }

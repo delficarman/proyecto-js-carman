@@ -18,8 +18,9 @@ btnRegistrar.addEventListener("click", function (event) {
     const registro = inputRegistro.value;
     const nombre = inputNombre.value;
     const apellido = inputApellido.value;
-    const mensaje = persona.crearAlumno(registro, nombre, apellido);
-    persona.mostrarMensaje(mensaje);
+    // const mensaje = persona.crearAlumno(registro, nombre, apellido);
+    persona.crearAlumno(registro,nombre,apellido);
+    // persona.mostrarMensaje(mensaje);
     formRegistrar.reset();
 });
 
@@ -27,15 +28,17 @@ btnAgregar.addEventListener("click", function (event) {
     event.preventDefault();
     const registro = inputRegistroNota.value;
     const nota = parseFloat(inputNota.value);
-    const mensaje = persona.agregarNota(registro, nota);
-    persona.mostrarMensaje(mensaje);
+    // const mensaje = persona.agregarNota(registro, nota);
+    // persona.mostrarMensaje(mensaje);
+    persona.agregarNota(registro,nota);
     formAgregarNota.reset();
 });
 
 btnConsultar.addEventListener("click", function (event) {
     event.preventDefault();
     const registro = inputRegistroPromedio.value;
-    const mensaje = persona.verPromedio(registro);
-    persona.mostrarMensaje(mensaje);
+    // const mensaje = persona.verPromedio(registro);
+    // persona.mostrarMensaje(mensaje);
+    persona.verPromedio(registro);
     formPromedio.reset();
 });
