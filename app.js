@@ -42,3 +42,32 @@ btnConsultar.addEventListener("click", function (event) {
     persona.verPromedio(registro);
     formPromedio.reset();
 });
+
+// Función para obtener los datos de los profesores
+function obtenerProfesores(){
+    fetch ('./profesores.json')
+    .then(response => response.json())
+    .then(data => {
+        cardsProfesores(data);
+    })
+    .catch(error => {
+        console.error("Error al obtener los datos de profesores:", error);
+    });
+}
+
+function cardsProfesores(profesores){
+    const contenedor=document.getElementById("contenedor-cards");
+    profesores.forEach(profesor => {
+        contenedor.innerHTML+=`
+        <div class="card mx-auto mb-3" style="width: 18rem;">
+            <div class="card-header">
+                ${profesor.nombre} ${profesor.apellido}
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">${profesor.materia}</li>
+            </ul>
+        </div>    
+        `;
+    })
+}
+
+obtenerProfesores();

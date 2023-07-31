@@ -1,0 +1,22 @@
+[
+    {
+        "nombre": "Delfina",
+        "apellido": "Carman",
+        "materia":"Matemática"
+    },
+    {
+        "nombre": "Antonio",
+        "apellido": "Lopez",
+        "materia":"Sociología"
+    },
+    {
+        "nombre": "Marcelo",
+        "apellido": "Furlong",
+        "materia":"HTML y CSS"
+    },
+    {
+        "nombre": "Melina",
+        "apellido": "García",
+        "materia":"Java Script"
+    }
+]
