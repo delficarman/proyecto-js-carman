@@ -1,6 +1,13 @@
 Proyecto Final:
 
-Tener objetos, arrays, funciones, condicionales, iteradores, DOM, vistas, eventos, librerias, asincronia, fetch, construccion de alguna API local o remota (API local es el archivo json).
-Si no tenemos alguno de esos puede estar aprobado, pero no va a ser un 10.
+Este proyecto consiste en una página universitaria donde se pueden cargar nuevos alumnos, cargarle notas a dichos alumnos y visualizar sus respectivos promedios.
 
-Puede ser un solo html. Intentar que sean funcionalidades completas. 
+Utilice librerías para los mensajes que se muestran cuando se utilizan los botones "Registrar", "Agregar" y "Consultar promedio".
+
+Utilice una API local para mostrar los distintos profesores y las materias que dictan.
+
+Espero que les guste!
+
+Gracias por todas las clases y la paciencia.
+
+Delfina
